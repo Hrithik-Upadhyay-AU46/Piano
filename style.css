@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    font-family: 'Signika Negative', sans-serif;
+}
+
+@keyframes gradient {
+    0% {
+         background-position: 0% 50%;
+    }
+    
+    50% {
+    background-position: 100% 50%;
+    }
+    
+    100% {
+    background-position: 0% 50%;
+    }
+    }
+
+.wrapper{
+    width: 780px;
+    /* background-color: #141414; */
+    background-image: url(./abstract-black-checkers-texture-background-illustration-free-vector.jpg);
+    padding: 34px 48px;
+    border-radius: 20px;
+    
+}
+
+.wrapper header{
+    color: #b2b2b2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2{
+    font-size: 1.6rem;
+}
+
+header .colums{
+    display: flex;
+    align-items: center;
+}
+
+header .colums span{
+    font-weight: 500;
+    font-size: 1.19rem;
+    margin-right: 15px;
+}
+
+.volume-slider{
+    accent-color: #fff;
+}
+
+.keys-checkbox input{
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    background: #4b4b4b;
+    border-radius: 35px;
+    cursor: pointer;
+    position: relative;
+}
+.keys-checkbox input::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #8c8c8c;
+    border-radius: inherit;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.keys-checkbox input:checked:before{
+    left: 30px;
+    background: #fff;
+}
+
+.piano-keys{
+    display: flex;
+    list-style: none;
+    margin-top: 40px;
+}
+.piano-keys .key{
+    color: #a2a2a2;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+.piano-keys .white{
+    width: 70px;
+    height: 230px;
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.piano-keys .black{
+    width: 44px;
+    height: 140px;
+    background: linear-gradient(#333 , #000 );
+   margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    z-index: 2;
+}
+
+.piano-keys .key span{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+.piano-keys .white:active{
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom, #fff 0%, #eee 4%);
+}
+
+.piano-keys .black:active{
+    box-shadow: inset -5px 5px 20px rgba(225,225,225,0.1);
+    background: linear-gradient(#333 , #434343 )
+}
+
+.hide span{
+    display: none;
+}

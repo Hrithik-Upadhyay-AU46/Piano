@@ -139,3 +139,15 @@ header .colums span{
 .hide span{
     display: none;
 }
+
+@media only screen and (max-width: 900px) {
+    .wrapper{
+        width: 90vh;
+        /* background-color: #141414; */
+        background-image: url(./abstract-black-checkers-texture-background-illustration-free-vector.jpg);
+        padding: 34px 48px;
+        border-radius: 20px;
+        transform: rotate(-90deg);
+        
+    }
+  }
